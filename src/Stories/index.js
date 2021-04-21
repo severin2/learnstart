@@ -3,7 +3,7 @@ import './Stories.scss';
 import { Col, Row } from 'antd';
 
 import Header from '../Header';
-import stories from '../stories.json';
+import stories from '../storiesData.json';
 import StoriesList from './StoriesList';
 
 export default function Stories() {
