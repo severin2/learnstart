@@ -1,0 +1,10 @@
+.StoryItem-card {
+  width: 320px;
+  height: 320px;
+}
+
+.StoryItem-card .ant-card-meta-title {
+  overflow: visible;
+  overflow-wrap: normal;
+  white-space: normal;
+}

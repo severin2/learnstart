@@ -1,0 +1,20 @@
+@import '../colors.scss';
+
+.NoticeButton-text {
+  color: $GREY_FOUR;
+  font-weight: 700;
+}
+
+.NoticeButton {
+  background-color: $NOTICE;
+  color: $GREY_FOUR;
+  border: none;
+  width: 100%;
+}
+
+.NoticeButton:hover {
+  cursor: pointer;
+  background-color: $NOTICE;
+  color: $GREY_FOUR;
+  border: 1px solid $GREY_FOUR;
+}

@@ -1,0 +1,76 @@
+@import '~antd/dist/antd.css';
+@import './colors.scss';
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  font-family: 'Source Sans Pro';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: 'Source Sans Pro';
+}
+
+.color-one {
+  color: $GREY_ONE;
+}
+
+.color-two {
+  color: $GREY_TWO;
+}
+
+.color-three {
+  color: $GREY_THREE;
+}
+
+.color-four {
+  color: $GREY_FOUR;
+}
+
+.color-notice {
+  color: $NOTICE
+}
+
+.bg-one {
+  background: $GREY_ONE;
+}
+
+.bg-two {
+  background: $GREY_TWO;
+}
+
+.bg-three {
+  background: $GREY_THREE;
+}
+
+.bg-four {
+  background: $GREY_FOUR;
+}
+
+.bg-notice {
+  background-color: $NOTICE
+}
+
+/* Style guide */
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+ font-size: 30px;
+}
+
+h3 {
+ font-size: 25px;
+}
+
+p {
+ font-size: 15px;
+}
+
+
