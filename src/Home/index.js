@@ -24,7 +24,7 @@ const TEXT = [
   },
 ];
 
-export default function Home() {
+export default function Home({ header }) {
   const spacerForLarge = (
     <Col span={12}>
       <div className="bg-two Home-height-full Home-container"></div>
@@ -79,7 +79,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      {header}
       <div className="bg-four">
         <div className="bg-one Home-height-full">
           <div className="Home-content">

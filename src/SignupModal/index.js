@@ -6,7 +6,7 @@ import { useState } from 'react';
 import SignupButton from '../SignupButton';
 import SignupForm from '../SignupForm';
 
-export default function SignupModal({ text, type }) {
+export default function SignupModal({ onLogin }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -20,6 +20,14 @@ export default function SignupModal({ text, type }) {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+
+  const handleOnLogin = (values) => {
+    if (typeof onLogin === 'function') {
+      onLogin(values);
+    }
+    setIsModalVisible(false);
+  }
+
   return (
     <>
       <SignupButton onClick={showModal} />
@@ -29,7 +37,7 @@ export default function SignupModal({ text, type }) {
         onCancel={handleCancel}
         footer={null}
       >
-        <SignupForm />
+        <SignupForm onLogin={handleOnLogin} />
       </Modal>
     </>
   );

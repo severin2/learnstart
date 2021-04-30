@@ -2,14 +2,13 @@ import './Stories.scss';
 
 import { Col, Row } from 'antd';
 
-import Header from '../Header';
 import stories from '../storiesData.json';
 import StoriesList from './StoriesList';
 
-export default function Stories() {
+export default function Stories({ header }) {
   return (
     <>
-      <Header />
+      {header}
       <div className="bg-one Stories-header">
         <Row style={{ height: '100%' }} justify="center" align="middle">
           <Col span={24}>
