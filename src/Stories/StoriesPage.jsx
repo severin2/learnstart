@@ -46,7 +46,7 @@ export default function StoriesPage({
       </div>
       {!!user && (
         <Row justify="center" align="middle">
-          <Col sm={{ span: 12 }} md={{ span: 0 }}>
+          <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 0 }}>
             <Link to="/add-story">
               <NoticeButton text="Add Story" />
             </Link>

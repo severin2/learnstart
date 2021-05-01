@@ -19,6 +19,7 @@
   align-items: center;
   box-sizing: border-box;
   position: relative;
+  padding-top: 0;
 
   &:not(:last-of-type) {
     margin-right: 20px; /* space */ 
