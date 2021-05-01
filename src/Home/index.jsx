@@ -1,9 +1,9 @@
 import './Home.scss';
 
 import { Col, Row } from 'antd';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import Header from '../Header';
 import NoticeButton from '../NoticeButton';
 
 const TEXT = [
@@ -83,26 +83,30 @@ export default function Home({ header }) {
       <div className="bg-four">
         <div className="bg-one Home-height-full">
           <div className="Home-content">
-            <Row justify="center" align="middle">
+            <Row style={{ height: '100%' }} justify="start" align="middle">
               <Col span={24}>
-                <Row justify="center">
-                  <h1 className="color-four">Stay hungry. Stay foolish.</h1>
-                </Row>
-              </Col>
+                <Row>
+                  <Col span={24}>
+                    <Row justify="start">
+                      <h1 className="color-four">Stay hungry. Stay foolish.</h1>
+                    </Row>
+                  </Col>
 
-              <Col span={24}>
-                <Row justify="center">
-                  <p className="color-three">
-                    Learn from the hottest startups in the world.
-                  </p>
-                </Row>
-              </Col>
+                  <Col style={{ marginTop: '-10px' }} span={24}>
+                    <Row justify="start">
+                      <p className="color-three">
+                        Learn from the hottest startups in the world.
+                      </p>
+                    </Row>
+                  </Col>
 
-              <Col span={4}>
-                <Row justify="center">
-                  <Link to="/stories">
-                    <NoticeButton text="Read Now" />
-                  </Link>
+                  <Col span={4}>
+                    <Row justify="start">
+                      <Link to="/stories">
+                        <NoticeButton text="Read Now" />
+                      </Link>
+                    </Row>
+                  </Col>
                 </Row>
               </Col>
             </Row>
@@ -168,3 +172,7 @@ export default function Home({ header }) {
     </>
   );
 }
+
+Home.propTypes = {
+  header: PropTypes.node.isRequired,
+};

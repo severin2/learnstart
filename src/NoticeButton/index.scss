@@ -10,11 +10,25 @@
   color: $GREY_FOUR;
   border: none;
   width: 100%;
+
+  &:hover {
+    background-color: $NOTICE;
+    color: $GREY_FOUR;
+    cursor: pointer;
+    border: 1px solid $GREY_FOUR;
+  }
 }
 
-.NoticeButton:hover {
-  cursor: pointer;
-  background-color: $NOTICE;
+.NoticeButton-inverted {
+  background-color: $GREY_TWO;
   color: $GREY_FOUR;
-  border: 1px solid $GREY_FOUR;
+  border: none;
+  width: 100%;
+
+  &:hover {
+    background-color: $GREY_TWO;
+    color: $GREY_FOUR;
+    cursor: pointer;
+    border: 1px solid $GREY_FOUR;
+  }
 }

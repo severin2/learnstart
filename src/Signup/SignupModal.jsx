@@ -1,11 +1,17 @@
 import './SignupModal.scss';
 
 import { Modal } from 'antd';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-import SignupButton from '../SignupButton';
-import SignupForm from '../SignupForm';
+import SignupButton from './SignupButton';
+import SignupForm from './SignupForm';
 
+/**
+ * Draws the button to open the modal and the modal, tracks the state of it being opened/closed
+ * @param {*} param0 
+ * @returns 
+ */
 export default function SignupModal({ onLogin }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -25,8 +31,9 @@ export default function SignupModal({ onLogin }) {
     if (typeof onLogin === 'function') {
       onLogin(values);
     }
+    // modal closes even if no function was passed
     setIsModalVisible(false);
-  }
+  };
 
   return (
     <>
@@ -42,3 +49,7 @@ export default function SignupModal({ onLogin }) {
     </>
   );
 }
+
+SignupModal.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+};

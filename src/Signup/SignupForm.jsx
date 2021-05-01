@@ -1,10 +1,20 @@
 import './SignupForm.scss';
 
 import { Col, Form, Input, Row } from 'antd';
+import PropTypes from 'prop-types';
 
 import NoticeButton from '../NoticeButton';
 
+/**
+ * The form that collects name, email, and password. Is used by the modal and the signup page
+ * @param {*} param0
+ * @returns
+ */
 export default function SignupForm({ onLogin }) {
+  /**
+   *
+   * @param {{ name: string, email: string, password: string }} values
+   */
   const handleOnFinish = (values) => {
     if (typeof onLogin === 'function') {
       onLogin(values);
@@ -12,7 +22,7 @@ export default function SignupForm({ onLogin }) {
   };
 
   const handleOnFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
+    console.error('Failed to submit form', errorInfo);
   };
 
   return (
@@ -20,7 +30,7 @@ export default function SignupForm({ onLogin }) {
       <Row justify="center" align="middle">
         <Col span={24}>
           <Row justify="center">
-            <h1>Sign up</h1>
+            <h1>Sign Up</h1>
           </Row>
         </Col>
         <Col span={24}>
@@ -57,7 +67,7 @@ export default function SignupForm({ onLogin }) {
         </Col>
 
         <Col span={24}>
-          <Row className="SignupModal-cta" justify="center">
+          <Row className="SignupForm-cta" justify="center">
             <NoticeButton text="Continue" htmlType="submit" />
           </Row>
         </Col>
@@ -65,3 +75,7 @@ export default function SignupForm({ onLogin }) {
     </Form>
   );
 }
+
+SignupForm.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+};

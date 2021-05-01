@@ -1,10 +1,11 @@
 import './Header.scss';
 
 import { Button, Col, PageHeader, Row } from 'antd';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import SignupButton from '../SignupButton';
-import SignupModal from '../SignupModal';
+import SignupButton from '../Signup/SignupButton';
+import SignupModal from '../Signup/SignupModal';
 
 export default function Header({ user, onLogin, onLogout }) {
   let userSection = '';
@@ -13,7 +14,9 @@ export default function Header({ user, onLogin, onLogout }) {
       <Row align="middle">
         <Col span={24}>
           <span>Hi {user.name}</span>
-          <Button type="link" onClick={onLogout}>Log Out</Button>
+          <Button type="link" onClick={onLogout}>
+            Log Out
+          </Button>
         </Col>
       </Row>
     );
@@ -22,7 +25,7 @@ export default function Header({ user, onLogin, onLogout }) {
       <Row align="middle">
         <Col sm={{ span: 24 }} md={{ span: 0 }}>
           <Link to="/signup">
-            <SignupButton />
+            <SignupButton/>
           </Link>
         </Col>
         <Col xs={{ span: 0 }} sm={{ span: 0 }} md={{ span: 24 }}>
@@ -43,3 +46,9 @@ export default function Header({ user, onLogin, onLogout }) {
     />
   );
 }
+
+Header.propTypes = {
+  user: PropTypes.object,
+  onLogin: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
+};

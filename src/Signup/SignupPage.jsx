@@ -1,10 +1,16 @@
 import './SignupPage.scss';
 
 import { Row } from 'antd';
-
-import SignupForm from '../SignupForm';
+import PropTypes from 'prop-types';
 import { useHistory } from 'react-router';
 
+import SignupForm from './SignupForm';
+
+/**
+ * Renders the full-page signup form
+ * @param {*} param0
+ * @returns
+ */
 export default function SignupPage({ onLogin }) {
   const history = useHistory();
 
@@ -22,3 +28,7 @@ export default function SignupPage({ onLogin }) {
     </div>
   );
 }
+
+SignupPage.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+};

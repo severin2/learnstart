@@ -1,3 +1,5 @@
+@import '../colors.scss';
+
 .StoryItem-card {
   width: 320px;
   height: 320px;
@@ -7,4 +9,16 @@
   overflow: visible;
   overflow-wrap: normal;
   white-space: normal;
+}
+
+.StoryItem-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.StoryItem-action {
+  color: $NOTICE;
+  border-color: $NOTICE;
 }
